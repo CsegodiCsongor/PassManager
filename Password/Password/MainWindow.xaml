@@ -1,0 +1,76 @@
+﻿<Window x:Class="Password.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Grid.Column="1" FontSize="20" Margin="20" Name="LengthTextBox">
+            
+        </TextBox>
+        
+        <TextBlock Grid.Column="0" Grid.Row="0" FontSize="20" Margin="20">
+           Password lenght:
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" FontSize="20" Margin="20">
+           Include symbols
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" FontSize="20" Margin="20">
+           Include numbers
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" FontSize="20" Margin="20">
+           Include lowercase
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4" FontSize="20" Margin="20">
+           Include uppercase
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="5" FontSize="20" Margin="20">
+           Include ambigous 
+        </TextBlock>
+        
+
+        <CheckBox Grid.Column="1" Grid.Row="1" FontSize="20" Margin="20" Name="SymbolsCheckBox">
+            e.g. @#$%
+        </CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="2" FontSize="20" Margin="20" Name="NumbersCheckBox">
+            e.g. 123456
+        </CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="3" FontSize="20" Margin="20" Name="LowerCheckBox">
+            e.g. qwerty
+        </CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="4" FontSize="20" Margin="20" Name="UpperCheckBox">
+            e.g. QWERTY
+        </CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="5" FontSize="20" Margin="20" Name="AmbigCheckBox">
+            e.g. {}()/\|'",.;[]
+        </CheckBox>
+
+        <Button Grid.Column="1" Grid.Row="6"  FontSize="20" Margin="20" Name="GeneratePasswordButton" Click="GeneratePasswordButton_Click">
+            Generate password
+        </Button>
+        <Button Grid.Column="0" Grid.Row="6"  FontSize="20" Margin="20" Name="SavePassButton" Click="SavePassButton_Click">
+            Save password
+        </Button>
+        <TextBox  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7"  FontSize="20" Margin="20" Name="PasswordTextBox">
+            
+        </TextBox>
+
+    </Grid>
+</Window>
